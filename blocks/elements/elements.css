@@ -1,3 +1,9 @@
 .elements {
   margin-bottom: 66px;
 }
+
+@media (max-width: 425px) {
+  .elements {
+    margin-bottom: 48px;
+  }
+}
