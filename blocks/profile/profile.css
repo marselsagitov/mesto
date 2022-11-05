@@ -2,13 +2,14 @@
   min-height: 120px;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   align-items: center;
   margin-bottom: 50px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 650px) {
   .profile {
-    min-height: 286px;
+    /* min-height: 286px; */
     flex-direction: column;
     gap: 30px;
     margin-bottom: 36px;

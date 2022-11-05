@@ -5,7 +5,7 @@
   border: 1px solid #fff;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 650px) {
   .profile__add {
     width: 100%;
     background: url(../../../images/add.svg) center / 16px no-repeat;
