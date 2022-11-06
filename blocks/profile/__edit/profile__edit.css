@@ -3,6 +3,12 @@
   height: 24px;
   background: url(../../../images/edit.svg) center / 10px no-repeat;
   border: 1px solid #fff;
+  cursor: pointer;
+  transition: opacity .3s ease-in-out;
+}
+
+.profile__edit:hover {
+  opacity: 0.6;
 }
 
 @media (max-width: 425px) {

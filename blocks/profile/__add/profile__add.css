@@ -3,6 +3,12 @@
   height: 50px;
   background: url(../../../images/add.svg) center / 22px no-repeat;
   border: 1px solid #fff;
+  cursor: pointer;
+  transition: opacity .3s ease-in-out;
+}
+
+.profile__add:hover {
+  opacity: 0.6;
 }
 
 @media (max-width: 650px) {
