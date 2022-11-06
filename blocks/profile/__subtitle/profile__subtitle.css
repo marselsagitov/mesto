@@ -3,12 +3,14 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   grid-column: span 2;
 }
 
 @media (max-width: 425px) {
   .profile__subtitle {
-    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
     text-align: center;

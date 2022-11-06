@@ -1,27 +1,27 @@
-let editElem = document.querySelector('.profile__edit');
-let popupElem = document.querySelector('.popup');
-let popupCloseElem = popupElem.querySelector('.popup__close');
-let nameElem = document.querySelector('.profile__title');
-let aboutElem = document.querySelector('.profile__subtitle');
+let editElement = document.querySelector('.profile__edit');
+let popupElement = document.querySelector('.popup');
+let popupCloseElement = popupElement.querySelector('.popup__close');
+let titleElement = document.querySelector('.profile__title');
+let subtitleElement = document.querySelector('.profile__subtitle');
 let inputs = document.querySelectorAll('input');
-let formElem = document.querySelector('.popup__form');
+let formElement = document.querySelector('.popup__form');
 
 function popupOpen() {
-  popupElem.classList.add('popup_opened');
-  inputs[0].value = nameElem.textContent;
-  inputs[1].value = aboutElem.textContent;
+  inputs[0].value = titleElement.textContent;
+  inputs[1].value = subtitleElement.textContent;
+  popupElement.classList.add('popup_opened');
 }
 
 function popupClose() {
-  popupElem.classList.remove('popup_opened');
+  popupElement.classList.remove('popup_opened');
 }
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
-  nameElem.textContent = inputs[0].value;
-  aboutElem.textContent = inputs[1].value;
+  titleElement.textContent = inputs[0].value;
+  subtitleElement.textContent = inputs[1].value;
   popupClose();
 }
-editElem.addEventListener('click', popupOpen);
-popupCloseElem.addEventListener('click', popupClose);
-formElem.addEventListener('submit', formSubmitHandler);
+editElement.addEventListener('click', popupOpen);
+popupCloseElement.addEventListener('click', popupClose);
+formElement.addEventListener('submit', formSubmitHandler);

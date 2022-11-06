@@ -14,7 +14,7 @@
 @media (max-width: 425px) {
   .profile__edit {
     width: 18px;
-  height: 18px;
+    height: 18px;
     background: url(../../../images/edit.svg) center / 8px no-repeat;
   }
 }
