@@ -1,6 +1,6 @@
 .popup__submit {
   width: 100%;
-  height: 46px;
+  height: 50px;
   background: #000;
   border-radius: 2px;
   border: none;
@@ -19,6 +19,7 @@
 
 @media (max-width: 425px) {
   .popup__submit {
+    height: 46px;
     font-size: 14px;
     line-height: 17px;
   }

@@ -1,7 +1,6 @@
 .header__logo {
   width: 142px;
   height: 33px;
-  cursor: default;
 }
 
 @media (max-width: 425px) {
