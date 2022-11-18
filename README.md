@@ -1,6 +1,7 @@
 # Проект: Место
 
-Адаптивный одностраничный сайт https://marselsagitov.github.io/mesto/
+Адаптивный одностраничный сайт
+с интерактивными элементами https://marselsagitov.github.io/mesto/
 
 ### Технологии
 
