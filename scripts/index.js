@@ -8,7 +8,10 @@ let nameProfileElement = document.querySelector('.profile__title');
 let jobProfileElement = document.querySelector('.profile__subtitle');
 let inputNameElement = document.querySelector('.popup__input_profile_name');
 let inputJobElement = document.querySelector('.popup__input_profile_job');
+let inputAddNameElement = document.querySelector('.popup__input_add_name');
+let inputAddLinkElement = document.querySelector('.popup__input_add_link');
 let formElement = document.querySelector('.popup__form');
+let formAddElement = document.querySelector('.popup__form_add');
 
 // opening a popup_edit and adding titles to an input from a profile when you click on the edit button
 
@@ -116,3 +119,27 @@ const renderCard = (dataCard) => {
 initialCards.forEach((dataCard) => {
   renderCard(dataCard);
 })
+
+// event handler
+
+const handleSubmitAddCards = (event) => {
+  event.preventDefault();
+  renderCard({ name: inputAddNameElement.value, link: inputAddLinkElement.value })
+  //renderCard({ link: inputAddLinkElement.value })
+  inputAddNameElement.value = '';
+  inputAddLinkElement.value = '';
+  popupAddClose();
+};
+
+formAddElement.addEventListener('submit', handleSubmitAddCards);
+
+/*
+function formSubmitHandler (evt) {
+  evt.preventDefault();
+  nameProfileElement.textContent = inputNameElement.value;
+  jobProfileElement.textContent = inputJobElement.value;
+  popupEditClose();
+}
+
+formElement.addEventListener('submit', formSubmitHandler);
+*/
