@@ -1,29 +1,32 @@
 let editElement = document.querySelector('.profile__edit');
+let addElement = document.querySelector('.profile__add');
 let closeElement = document.querySelector('.popup__close');
-let popupElement = document.querySelector('.popup');
+let closeAddElement = document.querySelector('.popup__close_add');
+let popupEditElement = document.querySelector('.popup_edit');
+let popupAddElement = document.querySelector('.popup_add');
 let nameProfileElement = document.querySelector('.profile__title');
 let jobProfileElement = document.querySelector('.profile__subtitle');
 let inputNameElement = document.querySelector('.popup__input_profile_name');
 let inputJobElement = document.querySelector('.popup__input_profile_job');
 let formElement = document.querySelector('.popup__form');
 
-// opening a popup and adding titles to an input from a profile when you click on the edit button
+// opening a popup_edit and adding titles to an input from a profile when you click on the edit button
 
-function popupOpen() {
+function popupEditOpen() {
   inputNameElement.value = nameProfileElement.textContent;
   inputJobElement.value = jobProfileElement.textContent;
-  popupElement.classList.add('popup_opened');
+  popupEditElement.classList.add('popup_opened');
 }
 
-editElement.addEventListener('click', popupOpen);
+editElement.addEventListener('click', popupEditOpen);
 
-// popup closing when you click on the close button
+// popup_edit closing when you click on the close button
 
-function popupClose() {
-  popupElement.classList.remove('popup_opened');
+function popupEditClose() {
+  popupEditElement.classList.remove('popup_opened');
 }
 
-closeElement.addEventListener('click', popupClose);
+closeElement.addEventListener('click', popupEditClose);
 
 // editing and saving profile titles
 
@@ -31,10 +34,26 @@ function formSubmitHandler (evt) {
   evt.preventDefault();
   nameProfileElement.textContent = inputNameElement.value;
   jobProfileElement.textContent = inputJobElement.value;
-  popupClose();
+  popupEditClose();
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
+
+// opening popup_add
+
+function popupAddOpen() {
+  popupAddElement.classList.add('popup_opened');
+}
+
+addElement.addEventListener('click', popupAddOpen);
+
+// popup_add closing when you click on the close button
+
+function popupAddClose() {
+  popupAddElement.classList.remove('popup_opened');
+}
+
+closeAddElement.addEventListener('click', popupAddClose);
 
 
 //six default cards

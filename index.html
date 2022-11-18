@@ -33,7 +33,7 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_edit">
       <div class="popup__container">
         <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
         <h3 class="popup__title">Редактировать профиль</h3>
@@ -41,6 +41,17 @@
           <input type="text" class="popup__input popup__input_profile_name" name="name" placeholder="Имя" required>
           <input type="text" class="popup__input popup__input_profile_job" name="about" placeholder="Звание" required>
           <button type="submit" class="popup__submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_add">
+      <div class="popup__container">
+        <form name="addProfile" class="popup__form popup__form_add">
+          <button class="popup__close popup__close_add" type="button" aria-label="Закрыть окно"></button>
+          <h3 class="popup__title">Новое место</h3>
+          <input type="text" class="popup__input popup__input_profile_name" name="picture-name" value="" placeholder="Название">
+          <input type="text" class="popup__input popup__input_profile_job" name="picture-link" value="" placeholder="Ссылка на картинку">
+          <button type="submit" class="popup__submit popup__submit_add">Создать</button>
         </form>
       </div>
     </div>
