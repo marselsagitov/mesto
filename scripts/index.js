@@ -94,9 +94,13 @@ const initialCards = [
 const cardTemplate = document.querySelector('#template').content.querySelector('.elements__item');
 
 // cards generating
-
+  // like button
 const likeActive = (event) => {
   event.target.classList.toggle('elements__like_active');
+}
+  // remove card
+const handleDeleteCard = (event) => {
+  event.target.closest('.elements__item').remove();
 }
 
 const generateCard = (dataCard) => {
@@ -110,6 +114,9 @@ const generateCard = (dataCard) => {
 
   const likeButton = newCard.querySelector('.elements__like');
   likeButton.addEventListener('click', likeActive);
+
+  const deleteBtn = newCard.querySelector('.elements__recycle-bin');
+  deleteBtn.addEventListener('click', handleDeleteCard);
 
   return newCard;
 };
