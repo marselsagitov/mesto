@@ -13,6 +13,7 @@ let inputAddLinkElement = document.querySelector('.popup__input_add_link');
 let formElement = document.querySelector('.popup__form');
 let formAddElement = document.querySelector('.popup__form_add');
 
+
 // opening a popup_edit and adding titles to an input from a profile when you click on the edit button
 
 function popupEditOpen() {
@@ -94,6 +95,10 @@ const cardTemplate = document.querySelector('#template').content.querySelector('
 
 // cards generating
 
+const likeActive = (event) => {
+  event.target.classList.toggle('elements__like_active');
+}
+
 const generateCard = (dataCard) => {
   const newCard = cardTemplate.cloneNode(true);
 
@@ -102,6 +107,9 @@ const generateCard = (dataCard) => {
 
   const link = newCard.querySelector('.elements__img');
   link.src = dataCard.link;
+
+  const likeButton = newCard.querySelector('.elements__like');
+  likeButton.addEventListener('click', likeActive);
 
   return newCard;
 };
@@ -125,7 +133,6 @@ initialCards.forEach((dataCard) => {
 const handleSubmitAddCards = (event) => {
   event.preventDefault();
   renderCard({ name: inputAddNameElement.value, link: inputAddLinkElement.value })
-  //renderCard({ link: inputAddLinkElement.value })
   inputAddNameElement.value = '';
   inputAddLinkElement.value = '';
   popupAddClose();
@@ -133,13 +140,3 @@ const handleSubmitAddCards = (event) => {
 
 formAddElement.addEventListener('submit', handleSubmitAddCards);
 
-/*
-function formSubmitHandler (evt) {
-  evt.preventDefault();
-  nameProfileElement.textContent = inputNameElement.value;
-  jobProfileElement.textContent = inputJobElement.value;
-  popupEditClose();
-}
-
-formElement.addEventListener('submit', formSubmitHandler);
-*/
