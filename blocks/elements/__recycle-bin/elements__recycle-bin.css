@@ -1,0 +1,17 @@
+.elements__recycle-bin {
+  background: url(../../../images/recycle_bin.svg) center;
+  min-width: 18px;
+  min-height: 19px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  transition: opacity .3s ease-in-out;
+}
+
+.elements__recycle-bin:hover {
+  opacity: .6;
+}
+
